@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hobby's</title>
+  </head>
+
+  <body>
+    <a href="index.html">Startseite</a>
+    <a href="hobby.html">Hobby</a>
+    <a href="kontakt.html">Kontakt</a>
+
+    <h1>Hobbies</h1>
+
+    <p>Guate gschicht. Was schribt ma so übr hobbies wenn ma zwunga würd? Ischd as übrhaupt hobbies odr hobbys?</p>
+    <p>Wurscht. Do einfach a paar bildr, segand jo mehr als Worte 😇</p>
+
+    <table>
+      <tr>
+        <td>
+          <img src="images/bierbierbier.jpeg" alt="Einkaufswagen voller Bier." />
+          <p>Bier war wieder in Aktion</p>
+        </td>
+        <td>
+          <img src="images/vogelhaus-zu.jpeg" alt="Ein Vogelhaus." class="vogelhaus" onmouseenter="openBirdHouse()" onmouseleave="closeBirdHouse()" />
+          <p>Ein Vogelhaus - oder... ?</p>
+        </td>
+        <td>
+          <img src="images/likeaboss.jpeg" alt="Katze Balu an der Bar." class="op-top" />
+          <p>Like a boss 🐱</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img src="images/wandra.jpeg" alt="Kleine Schnapsfalsche im Bregenzerwald." />
+          <p>On tour</p>
+        </td>
+        <td>
+          <img src="images/bunnahabhain.jpeg" alt="Junger Mann vor einem Steuerrad." class="op-top" />
+          <p>Schottland '17. Long ago...</p>
+        </td>
+        <td>
+          <div class="nsfw">
+            <img src="images/nsfw.jpeg" alt="Better not see" />
+            <p>NSFW</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- CSS -->
+    <style>
+      img {
+        max-width: 100%;
+        height: 500px;
+        width: 500px;
+        object-fit: cover;
+        border-radius: 0.75rem;
+      }
+
+      .op-top {
+        object-position: top;
+      }
+
+      .nsfw {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .nsfw:hover {
+        opacity: 1;
+      }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+      // Folgender Code wird bei einem mouseenter (Reinfahren der Maus ins Image) aufgerufen
+      function openBirdHouse() {
+        // Referenz des Bildes holen
+        const image = document.querySelector('.vogelhaus');
+
+        // Und dann einfach das src-Attribut umstellen
+        image.src = 'images/vogelhaus-nice.jpeg';
+      }
+
+      function closeBirdHouse() {
+        // Referenz des Bildes wieder holen
+        const image = document.querySelector('.vogelhaus');
+
+        // Und dann das src-Attribut wieder auf das Ursprüngliche umstellen
+        image.src = 'images/vogelhaus-zu.jpeg';
+      }
+    </script>
+
+    <!--
+        Notiz:
+        Das öffnen/schließen des Vogelhauses könnte man auch mit CSS machen.
+        Ich wollte euch hier einfach nur etwas JavaScript (JS) zeigen :)
+    -->
+  </body>
+</html>
