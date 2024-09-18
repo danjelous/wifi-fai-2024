@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced HTML Tags</title>
+  </head>
+  <body>
+    <h1>Advanced HTML Tags</h1>
+
+    <!-- Sound / Musik mit audio einbinden. Vieles über Attribute steuerbar. -->
+    <p>Play me</p>
+    <audio src="better-day-186374.mp3" autoplay controls muted loop></audio><br />
+
+    <!-- Mit Video ... video's einbinden! Ähnlich wie Audio. Thumbnails mit poster-Attribut setzen -->
+    <video src="beach.mp4" controls autoplay muted loop></video>
+
+    <!-- Video aus YouTube einbinden -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/reKC23pqimQ?si=U_hg17aztC87wQHa"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+
+    <figure>
+      <img width="500" src="ftw.jpg" alt="Totally safe for work.">
+      <figcaption>3D-Rendering von User #43</figcaption>
+    </figure>
+
+    <picture>
+      <source media="(min-width: 600px)" srcset="lol.jpg">
+      <img width="500" src="ftw.jpg" alt="Totally safe for work.">
+    </picture>
+
+    <!-- In einem style-Tag kann ich CSS schreiben -->
+    <style>
+      body {
+        padding-bottom: 200px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      h1 {
+        text-align: center;
+        color: blueviolet;
+        background-color: darkorange;
+      }
+    </style>
+  </body>
+</html>
