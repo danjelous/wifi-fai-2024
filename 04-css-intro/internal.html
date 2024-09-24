@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Intro</title>
+  </head>
+  <body>
+    <h1>CSS Intro</h1>
+
+    <!--
+    Es gibt drei Varianten CSS einzubinden bzw. zu schreiben
+
+    1. Inline: Direkt auf dem HTML-Tag. Nachteil: gilt nur auf dem einen Tag.
+               Nur in Ausnahmefällen zu verwenden.
+    2. Internal: 'StyleSheet' in HTML eingebunden
+    3: External: Eigenes CSS-File
+   -->
+
+    <h2 style="color: green; font-size: 40px; letter-spacing: 4px; border-bottom: 5px solid pink;">Noch eine Überschrift</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate mollitia hic numquam itaque fuga. Consequatur, ab ipsam cumque ducimus suscipit ad mollitia consequuntur illum autem nulla a,
+      deleniti quas assumenda.
+    </p>
+
+    <h2>Noch eine Überschrift</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur totam aperiam aut sequi error incidunt laboriosam iste dignissimos laborum, architecto minima possimus nam obcaecati enim suscipit eveniet ipsum est magni.</p>
+
+    <!-- 2. Internal: in <style>-Tag kann ich CSS schreiben -->
+    <style>
+      p {
+        color: red;
+        background-color: bisque;
+      }
+
+      /* Kommentare in CSS
+       * Können auch mehrzeilig sein.
+       * Mit Element-Selektoren werden ALLE HTML-Elemente des Typ's selektiert.
+       * Sprich ich selektiere hiermit alle h2's in meinem index.html
+       */
+      h2 {
+        background-color: aqua;
+        color: brown;
+      }
+
+      p {
+        color: violet;
+      }
+    </style>
+  </body>
+</html>

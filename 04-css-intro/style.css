@@ -1,0 +1,31 @@
+html {
+  background-color: black;
+  color: beige;
+}
+
+/* Ich kann auch mehrere Elemente gleichzeitig selektieren.
+ * Trennen mit einem Beistrich.
+ */
+h1,
+h2 {
+  color: yellow;
+}
+
+/* Klassennamen sind frei zu vergeben / benennen und beginnen mit einem Punkt. */
+.green {
+  /* Farben können a) über RGB-Werte definiert werden */
+  color: rgb(0, 255, 0);
+
+  /* Oder in HEX-Variante, beginnend mit # */
+  color: #00ff00;
+
+  /* Wenn beide Zahlenwerte ident sind kann man sie nur einmal angeben. Wahnsinnig wichtig.. */
+  color: #0f0;
+
+  /* Oder wähle mir eine Farbe über den ColorPicker (Klick auf "Farbquadrat") */
+  color: #2aa74d;
+}
+
+#contact {
+  color: rgb(221, 183, 123);
+}
