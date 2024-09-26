@@ -11,6 +11,10 @@ h2 {
   color: yellow;
 }
 
+h2 {
+  margin-top: 40px;
+}
+
 /* Klassennamen sind frei zu vergeben / benennen und beginnen mit einem Punkt. */
 .green {
   /* Farben können a) über RGB-Werte definiert werden */
@@ -29,3 +33,21 @@ h2 {
 #contact {
   color: rgb(221, 183, 123);
 }
+
+.spacing {
+  /* Padding: Innenabstand */
+  padding: 30px;
+  padding-top: 0;
+}
+
+/*
+  Naming Conventions (Variablen Benennung)
+
+  PascalCase: MyCoolClassName
+  camelCase:  myCoolClassName     - z.B. in JavaScript
+  snake_case: my_cool_class_name  - PHP
+  kebap-case: my-cool-class-name  - CSS
+
+  ABER das wichtigste: verwendet sprechende Namen!
+  Beim Lesen sollte klar sein, was die Klasse macht.
+*/
