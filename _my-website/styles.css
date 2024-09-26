@@ -1,0 +1,47 @@
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  color: #2C3E50;
+}
+
+section {
+  /* Oben und unten 50px, seitlich 0 */
+  /* padding: 50px 0; */
+  margin: 300px 0;
+}
+
+a {
+  /* Entfernen von Unterstrich */
+  text-decoration: none;
+  color: #2C3E50;
+  margin-left: 15px;
+}
+
+a:hover {
+  border-bottom: 2px solid #000;
+}
+
+header {
+  background-color: #2ECC71;
+  padding: 30px 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*
+ * Dieses Media Query (MQ) wird nur angewendet wenn der User
+ * 'Bewegung reduzieren" (o.Ä; je nach OS) in seinen Systemeinstellungen nicht abgeschaltet hat.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    /* Smooth scrolling für das ganze HTML setzen */
+    scroll-behavior: smooth;
+  }
+}
