@@ -1,0 +1,80 @@
+.parent {
+  /* Generelles Styling */
+  height: 300px;
+  background-color: #eee;
+  border: 5px solid black;
+
+  /* Flexbox-Verhalten wird auf dem Parent definiert */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: deeppink;
+  border: 2px solid black;
+}
+
+.static {
+  position: static;
+}
+
+/* Absolute Positionierung bei Widget's oder Modalen / PopUps die aus dem
+ * normalen Dokumentenfluss (oben nach unten) ausbrechen. */
+.absolute {
+  position: absolute;
+
+  /* Kann mit top / right / bottom / left Positionierung angeben */
+  top: 100px;
+  right: 0;
+}
+
+/*
+ * Das Element ist am Bildschirm 'fixiert' und bleibt immer sichtbar,
+ * unabhängig von der Scrollposition.
+ */
+.fixed {
+  position: fixed;
+
+  /* Beispiele: Scroll to top button oder Chatbots */
+  right: 25px;
+  bottom: 25px;
+}
+
+/* Bleibt beim Rausscrollen am Bildschirm 'kleben'.
+ * Positionierung wieder über top / right / ...  */
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+/* Position relative macht für sich alleine nichts, macht nur
+ * in Kombination mit absolute Sinn. Das absolute orientiert sich
+ * am nächsten relativen Element. */
+.relative {
+  position: relative;
+}
+
+button, input[type="button"] {
+
+}
+
+.btn {
+  background-color: #141dea;
+  color: #ece7e7;
+  padding: 5px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.btn:hover {
+  background-color: #3e47f1;
+  color: #fff;
+}
+
+body {
+  padding-bottom: 200px;
+}

@@ -9,10 +9,41 @@ body {
   color: #2C3E50;
 }
 
+/* Mit @font-face kann ich eigene Schriftarten auf meiner Webseite verwenden. */
+@font-face {
+
+  /* Mit font-family den Namen angeben, mit der sie verwendet werden soll. */
+  font-family: "Quicksand";
+
+  /* Wo liegt die Schriftart bzw. die Datei? */
+  src: url("fonts/Quicksand-Bold.ttf");
+
+  font-weight: 700; /* bold */
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("fonts/Quicksand-Regular.ttf");
+    font-weight: 400; /* "normal" */
+}
+
+/*
+ * Alternativ über Google Webfonts Helper (https://gwfh.mranftl.com/fonts) Fonts beschaffen :)
+ * - Einfacheres UI
+ * - woff2 Support (besseres / leichteres Format)
+ * - @font-face Definitionen zum Rauskopieren
+ */
+
+/* Ab diesem Punkt kann ich die Schriftart "Quicksand" in CSS verwenden. */
+
 section {
   /* Oben und unten 50px, seitlich 0 */
   /* padding: 50px 0; */
   margin: 300px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Quicksand", sans-serif;
 }
 
 a {
