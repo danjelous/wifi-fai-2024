@@ -1,0 +1,80 @@
+h1 {
+  color: blue;
+}
+
+.heading-styling {
+  color: yellow;
+}
+
+#my-id {
+  color: green;
+}
+
+/* Mit !important wird ALLES überschrieben - daher nur mit Vorsicht zu verwenden. */
+.yo-yo {
+  color: red !important;
+}
+
+.do-not-do-this {
+  color: orange !important;
+}
+
+/* ---------------------
+ * PSEUDO SELEKTOREN
+ * --------------------- */
+a {
+  color: red;
+}
+
+a:hover {
+  color: darkcyan;
+}
+
+a:focus {
+  outline: 5px solid blue;
+}
+
+ol :first-child {
+  text-decoration: underline;
+}
+
+ol :last-child {
+  font-size: 20px;
+}
+
+/* Selektiert alle geraden Children (fängt bei 0 an zu zählen) */
+ol :nth-child(even) {
+  background-color: grey;
+}
+
+ol :nth-child(odd) {
+  background-color: lightgray;
+}
+
+/* Selektiere jedes dritte (3n) child, fange bei 2 an (Offset) */
+ol :nth-child(3n + 2) {
+  background-color: #0f0;
+}
+
+/* General Selector - selektiert alles! */
+* {
+  /* Auskommentiert, da sonst alles schwarz wäre */
+  /* background-color: black; */
+}
+
+/* Adjacent Sibling Selector - selektiert EIN p nach einem p auf gleicher Ebene */
+p + p {
+  color: red;
+}
+
+/* General Sibling Selector - Selektiert ALLE p's nach einem p auf gleicher Ebene */
+p ~ p {
+  color: green;
+}
+
+/* Direct Child Selector - Selektiert nur direkte Kinder (eine Einrückung), keine Verschachtelten.
+ * In diesem Fall werden alle Subitems selektiert.
+ */
+ul ul > li {
+  background-color: #f00;
+}
