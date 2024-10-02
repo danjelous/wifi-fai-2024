@@ -4,6 +4,10 @@ html, body {
   padding: 0;
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
 body {
   font-family: Verdana, sans-serif;
   color: #2C3E50;
@@ -46,6 +50,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Quicksand", sans-serif;
 }
 
+p {
+  margin-top: 0;
+}
+
 a {
   /* Entfernen von Unterstrich */
   text-decoration: none;
@@ -57,13 +65,41 @@ a:hover {
   border-bottom: 2px solid #000;
 }
 
+img {
+  /* Responsive Image: jedes Bild wird maximal so breit wie der Bildschirm. */
+  max-width: 100%;
+  height: auto;
+}
+
 header {
+  position: sticky;
+  top: 0;
   background-color: #2ECC71;
   padding: 30px 60px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.image {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  /* Wenn mein Bildschirm mindestens 1024px breit ist, 'greift' folgendes CSS. */
+  .image-text-holder {
+    display: flex;
+    gap: 2%;
+  }
+
+  .image, .text {
+    width: 49%;
+  }
+
+  .image {
+    margin-bottom: 0;
+  }
 }
 
 /*
