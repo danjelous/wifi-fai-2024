@@ -1,47 +1,21 @@
-/* Reset */
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-padding-top: 80px;
-}
-
-body {
-  font-family: Verdana, sans-serif;
-  color: #2C3E50;
-}
-
-/* Mit @font-face kann ich eigene Schriftarten auf meiner Webseite verwenden. */
-@font-face {
-
-  /* Mit font-family den Namen angeben, mit der sie verwendet werden soll. */
-  font-family: "Quicksand";
-
-  /* Wo liegt die Schriftart bzw. die Datei? */
-  src: url("../fonts/Quicksand-Bold.ttf");
-
-  font-weight: 700;
-  /* bold */
-}
-
-@font-face {
-  font-family: "Quicksand";
-  src: url("../fonts/Quicksand-Regular.ttf");
-  font-weight: 400;
-  /* "normal" */
-}
-
 /*
- * Alternativ über Google Webfonts Helper (https://gwfh.mranftl.com/fonts) Fonts beschaffen :)
- * - Einfacheres UI
- * - woff2 Support (besseres / leichteres Format)
- * - @font-face Definitionen zum Rauskopieren
+ * Mit @import kann ich andere CSS-Files in das aktuelle einbinden.
+ * Heißt wenn ich alles hier im main.css einbinde, muss ich auf HTML-Seite
+ * nur einmal das main.css einbinden und nicht alle Files einzeln.
+ *
+ * -- ACHTUNG!
+ * Mit mehreren CSS-Files muss der Browser auch mehrere Requests machen -> Seite lädt langsamer.
+ * Also nach der Entwicklungsphase entweder alle Files wieder zu einem Einzelnen zusammenfügen
+ * oder gleich nur mit einem einzelnen, großen CSS-File arbeiten.
+ *
+ * Für unseren Web-Intro Kurs lassen wir das Zusammenfügen der Files mal aus :)
  */
+@import 'variables.css';
+@import 'base.css';
 
-/* Ab diesem Punkt kann ich die Schriftart "Quicksand" in CSS verwenden. */
+@import 'typography.css';
+@import 'nav.css';
+
 
 section {
   /* Langschreibweise / explizit jede Seite angeben */
@@ -58,7 +32,7 @@ section {
 
 .container {
   /* Maximalbreite unseres containers */
-  max-width: 1440px;
+  max-width: 1080px;
 
   /* div horizontal zentrieren */
   /* margin-left: auto;
@@ -68,24 +42,8 @@ section {
   margin: 0 auto;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Quicksand", sans-serif;
-}
-
-p {
-  margin-top: 0;
-}
-
-a {
-  /* Entfernen von Unterstrich */
-  text-decoration: none;
-  color: #2C3E50;
-  margin-left: 15px;
+blockquote {
+  font-style: italic;
 }
 
 img {
@@ -134,19 +92,7 @@ img {
 }
 
 @media (min-width: 1024px) {
-  /* Damit hover-styles nicht fälschlicherweise auf mobile getriggert werden. */
-  a:hover {
-    border-bottom: 2px solid #000;
-  }
-}
-
-/*
- * Dieses Media Query (MQ) wird nur angewendet wenn der User
- * 'Bewegung reduzieren" (o.Ä; je nach OS) in seinen Systemeinstellungen nicht abgeschaltet hat.
- */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    /* Smooth scrolling für das ganze HTML setzen */
-    scroll-behavior: smooth;
+  section {
+    padding: 60px 30px;
   }
 }
