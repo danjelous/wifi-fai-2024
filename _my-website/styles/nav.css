@@ -1,7 +1,7 @@
 header {
   position: sticky;
   top: 0;
-  background-color: #2ECC71;
+  background-color: var(--clr-primary);
   padding: 0 15px;
 }
 
@@ -9,7 +9,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: var(--header-height);
 }
 
 /* Ausblenden der Desktop Navigation auf mobile */
@@ -20,10 +20,10 @@ header {
 .mobile-nav-drawer {
   position: fixed;
   right: 0;
-  top: 80px;
+  top: var(--header-height);
   width: 250px;
   height: 100%;
-  background-color: #2ECC71;
+  background-color: var(--clr-primary);
   transform: translateX(250px);
   /* Um die Breite von sich selbst nach rechts (X) verschieben */
   transition: transform 300ms ease-in-out;
