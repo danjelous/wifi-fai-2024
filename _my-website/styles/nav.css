@@ -3,6 +3,10 @@ header {
   top: 0;
   background-color: var(--clr-primary);
   padding: 0 15px;
+
+  /* z-Index: Reihenfolge, wie die Layer übereinander liegen.
+   * Je höher der Index, desto weiter oben der Layer. */
+  z-index: 1;
 }
 
 .main-header {
@@ -50,8 +54,9 @@ header {
 /* Ab dieser Breite wird die Sichtbarkeit der beiden Navigationen gewechselt. */
 @media (min-width: 1024px) {
   header {
-    padding: 0 30px;
+    padding: 0 var(--space-large);
   }
+
   .mobile-nav {
     display: none;
   }
