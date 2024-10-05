@@ -30,6 +30,7 @@
 body {
   font-family: Verdana, sans-serif;
   color: var(--clr-text);
+  line-height: 1.5;
 }
 
 h1,
@@ -38,7 +39,14 @@ h3,
 h4,
 h5,
 h6 {
+  color: var(--clr-heading);
   font-family: "Quicksand", sans-serif;
+  margin-bottom: calc(var(--space-main) / 2);
+  letter-spacing: 1.2px;
+}
+
+h2 {
+  font-size: 30px;
 }
 
 p {

@@ -73,6 +73,10 @@ img {
   color: #000;
 }
 
+.margin-top {
+  margin-top: var(--space-main);
+}
+
 .gallery-holder {
   display: grid;
   grid-template-columns: 1fr;
@@ -82,9 +86,13 @@ img {
 .gallery-item {
   /* Wichtig, damit das image on hover nicht darüber 'hinausskaliert' wird!  */
   overflow: hidden;
+
+  border-radius: 5px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .1);
 }
 
 .gallery-holder img {
+  display: block;
   max-height: 300px;
   object-fit: cover;
   object-position: center;
@@ -112,6 +120,7 @@ img {
 
   .gallery-holder {
     grid-template-columns: 1fr 1fr;
+    gap: var(--space-large);
   }
 
   .gallery-holder img:hover {

@@ -42,6 +42,7 @@ header {
   display: flex;
   flex-direction: column;
   padding: 15px;
+  border-top: 1px solid #9d9c9c;
 }
 
 .mobile-nav-drawer nav a {
