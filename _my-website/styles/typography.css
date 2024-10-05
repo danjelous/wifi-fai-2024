@@ -39,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--clr-heading);
+  color: var(--clr-text-dark);
   font-family: "Quicksand", sans-serif;
   margin-bottom: calc(var(--space-main) / 2);
   letter-spacing: 1.2px;
@@ -66,8 +66,15 @@ a {
 @media (min-width: 1024px) {
 
   /* Selektirere mir alle links OHNE klasse .btn */
+  a:not(.btn) {
+    /* Transparent damit 'springen' bei hover vermieden wird */
+    border-bottom: 2px solid transparent;
+    transition: all 300ms ease-in-out;
+  }
+
   a:not(.btn):hover {
     /* Damit hover-styles nicht fälschlicherweise auf mobile getriggert werden. */
-    border-bottom: 2px solid var(--clr-text);
+    color: var(--clr-text-dark);
+    border-bottom-color: var(--clr-text-dark);
   }
 }
