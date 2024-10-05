@@ -41,9 +41,28 @@ body {
 /* Ab diesem Punkt kann ich die Schriftart "Quicksand" in CSS verwenden. */
 
 section {
-  /* Oben und unten 50px, seitlich 0 */
-  /* padding: 50px 0; */
-  margin: 300px 0;
+  /* Langschreibweise / explizit jede Seite angeben */
+  /* padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 50px;
+  padding-bottom: 50px; */
+
+  /* Kurzschreibweise(n) */
+  /* Variante 1: padding: TOP RIGHT BOTTOM LEFT */
+  /* Varianet 2: VERTICAL HORIZONTAL */
+  padding: 50px 15px;
+}
+
+.container {
+  /* Maximalbreite unseres containers */
+  max-width: 1440px;
+
+  /* div horizontal zentrieren */
+  /* margin-left: auto;
+  margin-right: auto; */
+
+  /* Kurzschreibweise */
+  margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,29 +94,46 @@ header {
   position: sticky;
   top: 0;
   background-color: #2ECC71;
-  padding: 30px 60px;
+  padding: 30px 15px;
+}
 
+.main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.image {
+.splitter-left {
   margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px 25px;
+  background-color: #F39C12; /* Orange */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #F1C40F; /* Sunflower */
 }
 
 @media (min-width: 768px) {
   /* Wenn mein Bildschirm mindestens 1024px breit ist, 'greift' folgendes CSS. */
-  .image-text-holder {
+  .splitter {
     display: flex;
     gap: 2%;
   }
 
-  .image, .text {
+  .splitter-left, .splitter-right {
     width: 49%;
   }
 
-  .image {
+  .splitter-left {
     margin-bottom: 0;
   }
 }
