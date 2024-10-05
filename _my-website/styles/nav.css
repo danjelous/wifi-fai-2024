@@ -1,0 +1,58 @@
+header {
+  position: sticky;
+  top: 0;
+  background-color: #2ECC71;
+  padding: 0 15px;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Ausblenden der Desktop Navigation auf mobile */
+.desktop-nav {
+  display: none;
+}
+
+.mobile-nav-drawer {
+  position: fixed;
+  right: 0;
+  top: 80px;
+  width: 250px;
+  height: 100%;
+  background-color: #2ECC71;
+  transform: translateX(250px);
+  /* Um die Breite von sich selbst nach rechts (X) verschieben */
+  transition: transform 300ms ease-in-out;
+}
+
+/* Wenn unser drawer zusätzlich auch die is-active Klasse hat, dann dieses Styling anwenden */
+.mobile-nav-drawer.is-active {
+  transform: translateX(0);
+}
+
+.mobile-nav-drawer nav {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.mobile-nav-drawer nav a {
+  padding: 15px;
+  margin: 15px 0;
+  text-align: right;
+}
+
+/* Ab dieser Breite wird die Sichtbarkeit der beiden Navigationen gewechselt. */
+@media (min-width: 1024px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: block;
+  }
+}

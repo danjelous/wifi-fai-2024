@@ -5,14 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mine Website ❤️</title>
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/hamburgers.min.css">
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
   </head>
   <body>
     <header>
       <div class="container main-header">
         <div>MOL.at</div>
 
-        <nav>
+        <nav class="mobile-nav">
+          <button class="hamburger hamburger--spring" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </nav>
+
+        <aside class="mobile-nav-drawer">
+          <nav>
+            <a href="#ueber-uns">Über uns</a>
+            <a href="#gallerie">Gallerie</a>
+            <a href="#blog">Blog</a>
+            <a href="#kontakt">Kontakt</a>
+          </nav>
+        </aside>
+
+        <nav class="desktop-nav">
           <a href="#ueber-uns">Über uns</a>
           <a href="#gallerie">Gallerie</a>
           <a href="#blog">Blog</a>
@@ -99,5 +118,8 @@
         <section>footer</section>
       </div>
     </footer>
+
+    <!-- JavaScript am Ende des body-Tags einbinden (Ladezeiten) -->
+    <script src="scripts/main.js"></script>
   </body>
 </html>

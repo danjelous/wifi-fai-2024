@@ -1,5 +1,6 @@
 /* Reset */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -20,15 +21,17 @@ body {
   font-family: "Quicksand";
 
   /* Wo liegt die Schriftart bzw. die Datei? */
-  src: url("fonts/Quicksand-Bold.ttf");
+  src: url("../fonts/Quicksand-Bold.ttf");
 
-  font-weight: 700; /* bold */
+  font-weight: 700;
+  /* bold */
 }
 
 @font-face {
-    font-family: "Quicksand";
-    src: url("fonts/Quicksand-Regular.ttf");
-    font-weight: 400; /* "normal" */
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Regular.ttf");
+  font-weight: 400;
+  /* "normal" */
 }
 
 /*
@@ -65,7 +68,12 @@ section {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Quicksand", sans-serif;
 }
 
@@ -80,27 +88,10 @@ a {
   margin-left: 15px;
 }
 
-a:hover {
-  border-bottom: 2px solid #000;
-}
-
 img {
   /* Responsive Image: jedes Bild wird maximal so breit wie der Bildschirm. */
   max-width: 100%;
   height: auto;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  background-color: #2ECC71;
-  padding: 30px 15px;
-}
-
-.main-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .splitter-left {
@@ -112,29 +103,40 @@ header {
   font-weight: 700;
   text-decoration: none;
   padding: 8px 25px;
-  background-color: #F39C12; /* Orange */
+  background-color: #F39C12;
+  /* Orange */
   border-radius: 5px;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #F1C40F; /* Sunflower */
+  background-color: #F1C40F;
+  /* Sunflower */
 }
 
 @media (min-width: 768px) {
-  /* Wenn mein Bildschirm mindestens 1024px breit ist, 'greift' folgendes CSS. */
+
+  /* Wenn mein Bildschirm breiter als oben angegeben ist, 'greift' folgendes CSS. */
   .splitter {
     display: flex;
     gap: 2%;
   }
 
-  .splitter-left, .splitter-right {
+  .splitter-left,
+  .splitter-right {
     width: 49%;
   }
 
   .splitter-left {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Damit hover-styles nicht fälschlicherweise auf mobile getriggert werden. */
+  a:hover {
+    border-bottom: 2px solid #000;
   }
 }
 
