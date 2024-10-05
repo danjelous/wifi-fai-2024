@@ -10,7 +10,6 @@
  *
  * Für unseren Web-Intro Kurs lassen wir das Zusammenfügen der Files mal aus :)
  */
-@import 'variables.css';
 @import 'base.css';
 
 @import 'typography.css';
@@ -61,8 +60,7 @@ img {
   font-weight: 700;
   text-decoration: none;
   padding: 8px 25px;
-  background-color: #F39C12;
-  /* Orange */
+  background-color: var(--clr-primary);
   border-radius: 5px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -71,6 +69,8 @@ img {
 .btn:hover {
   background-color: #F1C40F;
   /* Sunflower */
+
+  color: #000;
 }
 
 @media (min-width: 768px) {

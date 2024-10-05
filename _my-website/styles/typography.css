@@ -46,7 +46,7 @@ p {
 }
 
 .text-large {
-  font-size: 18px;
+  font-size: var(--fs-larger);
 }
 
 a {

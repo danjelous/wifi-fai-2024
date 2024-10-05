@@ -1,3 +1,17 @@
+:root {
+  /* CSS Variablen */
+
+  /* Colour palette */
+  --clr-primary: #ffd201;
+  --clr-text: #2C3E50;
+
+  /* Typography */
+  --fs-larger: 18px;
+
+  /* Misc */
+  --header-height: 80px;
+}
+
 /* Reset */
 html,
 body {
