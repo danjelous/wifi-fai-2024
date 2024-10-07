@@ -5,6 +5,8 @@
   --clr-primary: #ffd201;
   --clr-text: #243341;
   --clr-text-dark: #0d1217;
+  --clr-text-light: #e0dede;
+  --clr-text-lighter: #fff;
 
   /* Typography */
   --fs-larger: 18px;

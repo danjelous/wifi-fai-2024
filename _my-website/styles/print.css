@@ -1,0 +1,11 @@
+@media print {
+  /* Alles hier drinnen wird bei der Druckansicht angewendet. */
+  html, body {
+    background-color: red;
+    color: #000;
+  }
+
+  footer {
+    display: none;
+  }
+}

@@ -63,6 +63,13 @@ a {
   color: var(--clr-text);
 }
 
+footer,
+footer * {
+  /* Vermeidet krasse schwarz / weiß Kontraste. 'Weiches' Schwarz oder etwas dunkles Weiß ist angenehmer für die Augen. */
+  background-color: var(--clr-text);
+  color: var(--clr-text-light);
+}
+
 @media (min-width: 1024px) {
 
   /* Selektirere mir alle links OHNE klasse .btn */
@@ -76,5 +83,10 @@ a {
     /* Damit hover-styles nicht fälschlicherweise auf mobile getriggert werden. */
     color: var(--clr-text-dark);
     border-bottom-color: var(--clr-text-dark);
+  }
+
+  footer a:not(.btn):hover {
+    color: var(--clr-text-lighter);
+    border-bottom-color: var(--clr-text-lighter);
   }
 }

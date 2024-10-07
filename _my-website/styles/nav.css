@@ -50,8 +50,8 @@ nav a {
 }
 
 .mobile-nav-drawer nav a {
-  padding: 15px;
-  margin: 15px 0;
+  padding: var(--space-main);
+  margin: var(--space-main) 0;
   text-align: right;
   font-size: var(--fs-larger);
 }
