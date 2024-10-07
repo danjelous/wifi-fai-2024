@@ -45,6 +45,10 @@ blockquote {
   font-style: italic;
 }
 
+address {
+  font-style: normal;
+}
+
 img {
   /* Responsive Image: jedes Bild wird maximal so breit wie der Bildschirm. */
   max-width: 100%;
@@ -146,6 +150,23 @@ img {
   opacity: 0.8;
 }
 
+footer,
+footer * {
+  /* Vermeidet krasse schwarz / weiß Kontraste. 'Weiches' Schwarz oder etwas dunkles Weiß ist angenehmer für die Augen. */
+  background-color: var(--clr-text);
+  color: #e5e5e5
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-main);
+}
+
+footer .social-media img {
+  width: 50px;
+}
+
 @media (min-width: 768px) {
 
   /* Wenn mein Bildschirm breiter als oben angegeben ist, 'greift' folgendes CSS. */
@@ -165,7 +186,6 @@ img {
 
   .gallery-holder {
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-large);
   }
 
   .gallery-holder img:hover {
@@ -181,6 +201,11 @@ img {
 
 @media (min-width: 1024px) {
   section {
-    padding: 60px var(--space-large);
+    padding: 60px var(--space-main);
+  }
+
+  .footer-wrapper {
+    justify-content: space-between;
+    flex-direction: row;
   }
 }

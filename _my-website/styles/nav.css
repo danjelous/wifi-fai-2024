@@ -16,7 +16,7 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 0 var(--space-main);
   height: var(--header-height);
 }
 
@@ -58,18 +58,13 @@ nav a {
 
 /* Ab dieser Breite wird die Sichtbarkeit der beiden Navigationen gewechselt. */
 @media (min-width: 1024px) {
-  .main-header {
-    padding-left: var(--space-large);
-    padding-right: var(--space-large);
-  }
-
   .mobile-nav {
     display: none;
   }
 
   .desktop-nav {
     display: flex;
-    gap: var(--space-large);
+    gap: var(--space-main);
   }
 
   .desktop-nav a {
