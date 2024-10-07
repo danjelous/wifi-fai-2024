@@ -29,7 +29,7 @@ Portfolio, Referenzen etc.)
 - Auf sematische Tags achten und diese auch verwenden
 - Barrierefreiheit: bei Bildern sprechende alt-Texte vergeben; Dateinamen entsprechend benennen
 - Formatierter Quellcode
-- Valides HTML
+- [Valides HTML](https://validator.w3.org/#validate_by_input): Es dürfen keine Warning's oder Error's auftreten, Info's dürfen vernachlässigt werden (obwohl es natürlich besser ist, wenn sie gar nicht erst auftreten 😊)
 
 ## Kür
 
