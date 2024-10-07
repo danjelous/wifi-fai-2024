@@ -51,6 +51,51 @@ img {
   height: auto;
 }
 
+.hero {
+  padding: 0;
+  height: 500px;
+
+  /* 'Anker' bzw. Begrenzung für absoluten Content setzen */
+  position: relative;
+}
+
+.hero-image {
+  height: 100%;
+  width: 100%;
+
+  /* object-fit: Schneidet das Bild zu und behält dabei die Proportionen: es wird nicht verzerrt! */
+  object-fit: cover;
+
+  /* Setze das Zentrum des Bildes immer sichtbar, schneide den Rest ab. */
+  object-position: center;
+}
+
+.hero-text {
+  position: absolute;
+
+  /* top und bottom 0 wichtig, so nimmt der Container die volle Höhe ein. Selbiges mit left / right */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* Mit Flexbox vertikal und horizontal centern */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 var(--space-main);
+
+  /* Overlay: Bild schwarz abdunkeln, Text auf weiß  */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Selektiert alle Elemente im .hero-text und gibt ihnen eine weiße Textfarbe */
+.hero-text * {
+  color: #fff;
+}
+
 .splitter-left {
   margin-bottom: 15px;
 }
@@ -126,6 +171,11 @@ img {
   .gallery-holder img:hover {
     transform: scale(1.1);
     opacity: 1;
+  }
+
+  .hero-text {
+    /* Breite auf 50% begrenzen */
+    padding: 0 25%;
   }
 }
 
