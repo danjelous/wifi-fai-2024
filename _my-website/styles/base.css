@@ -30,6 +30,7 @@ body {
   padding: 0;
 }
 
+/* Border-Box Model erzwingen (das ist das Bessere) */
 *,
 *:before,
 *:after {
